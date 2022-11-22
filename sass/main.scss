@@ -1,0 +1,22 @@
+// ------------------UTILS STYLES----------------
+@import './utils/variables';
+@import './utils/visually-hidden';
+
+// ------------------BASE STYLES-----------------
+@import './base/base';
+@import './base/reset';
+@import './base/common';
+
+// ------------------COMPONENTS STYLES-----------
+@import './components/container';
+@import './components/header';
+@import './components/hero';
+@import './components/benefits';
+@import './components/work';
+@import './components/team';
+@import './components/clients';
+@import './components/protfolio-filters';
+@import './components/cards-elements';
+@import './components/footer';
+@import './components/modal-window';
+@import './components/modal-form';

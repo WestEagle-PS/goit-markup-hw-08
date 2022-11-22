@@ -1,0 +1,85 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+
+    visibility: is-hidden;
+
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    transition-property: opacity, visibility;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.modal {
+    /* позицуионируем модальное окно по центру */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    /* ---------------------------------------------------- */
+
+    width: 528px;
+    min-height: 581px;
+
+    background-color: var(--main-white-clr);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 40px;
+}
+
+.modal-btn {
+    /* центрируем иконку в бордере */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* --------------------------------------- */
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    margin: 7px 8px 0 0;
+    padding: 0;
+
+    cursor: pointer;
+}
+
+.modal-btn-icon {
+    fill: #000000;
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+&:hover,
+&:focus {
+        fill: #2196F3;
+    }
+}
+
+.modal-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: calc(23 / 20);
+    margin-bottom: 12px;
+    color: var(--main-dark-clr);
+}

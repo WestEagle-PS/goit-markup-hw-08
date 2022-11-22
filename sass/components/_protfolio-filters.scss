@@ -1,0 +1,49 @@
+/* кнопки фильтров в portfolio */
+.filters-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 34px;
+}
+
+.filter-item {
+    margin-right: 8px;
+    
+&:last-child {
+        margin-right: 0;
+    }
+}
+
+.filter-button {
+    padding: 6px 22px;
+    margin: 0;
+}
+
+.button {
+    display: block;
+    font-family: 'Roboto';
+    font-style: normal;
+    color: var(--main-dark-clr);
+    background-color: #F5F4FA;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(26 / 16);
+    cursor: pointer;
+    border: 0;
+    border-radius: 4px;
+    text-align: center;
+    margin: 0;
+
+    transition-property: color, background-color, border-color, box-shadow, border-radius;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+&:hover,
+&:focus {
+        background-color: #2196F3;
+        color: var(--main-white-clr);
+        border-color: #2196F3;
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 4px;
+    }
+}
+

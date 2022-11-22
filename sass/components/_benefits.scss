@@ -1,0 +1,50 @@
+/**
+  |====================================
+  | секция наши преимущества (benefits)
+  |====================================
+*/
+.benefits__list {
+    display: flex;
+    padding: 0;
+}
+
+.benefits__item {
+    min-width: 270px;
+
+&:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+.benefits__logo-box {
+    width: 270px;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    background: #F5F4FA;
+    border-radius: 4px;
+}
+
+.benefits-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--main-dark-clr);
+    padding: 0 0 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.benefits__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    letter-spacing: 0.03em;
+    color: var(--main-gray-clr);
+    margin-top: 0;
+    margin-bottom: 0;
+}
