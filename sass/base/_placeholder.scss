@@ -1,0 +1,11 @@
+/* сброс маркированых точек в списках */
+%list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+%link {
+    text-decoration: none;
+    // color: currentColor;
+}

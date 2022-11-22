@@ -2,6 +2,7 @@
 
 /* создаем сетку из 9 элементов */
 .flex-container {
+    @extend %list;
     display: flex;
     flex-wrap: wrap;
 }
@@ -53,6 +54,7 @@ calc((100% - кол-во маржинов в строке * значение м�
     font-size: 18px;
     line-height: calc(36 / 18);
     margin: 0 0 4px;
+    letter-spacing: 0.06em;
 }
 
 .subtitle-text {
@@ -61,6 +63,7 @@ calc((100% - кол-во маржинов в строке * значение м�
     line-height: calc(30 / 16);
     color: var(--main-gray-clr);
     margin: 0;
+    letter-spacing: 0.03em;
 }
 
 .flex-text {

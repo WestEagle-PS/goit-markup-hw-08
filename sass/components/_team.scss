@@ -8,6 +8,7 @@
 }
 
 .team__list {
+    @extend %list;
     display: flex;
     justify-content: space-between;
     gap: 30px;
@@ -46,6 +47,7 @@
 }
 
 .team__icon-list {
+    @extend %list;
     display: flex;
     justify-content: center;
     gap: 10px;

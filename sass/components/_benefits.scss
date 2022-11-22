@@ -1,14 +1,11 @@
-/**
-  |====================================
-  | секция наши преимущества (benefits)
-  |====================================
-*/
 .benefits__list {
+@extend %list;
     display: flex;
     padding: 0;
 }
 
 .benefits__item {
+    @extend %item;
     min-width: 270px;
 
 &:not(:last-child) {

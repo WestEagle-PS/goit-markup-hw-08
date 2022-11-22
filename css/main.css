@@ -49,13 +49,6 @@ body {
   color: #212121;
 }
 
-/* сброс маркированых точек в списках */
-.list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
 /* reset */
 h1,
 h2,
@@ -65,10 +58,6 @@ h5,
 h6,
 p {
   margin: 0;
-}
-
-.link {
-  text-decoration: none;
 }
 
 /* делаем все изображения блочными, тем самым убирая нижний отступ + делаем изображение резиновым*/
@@ -92,6 +81,17 @@ img {
   margin-top: 0;
   margin-bottom: 50px;
   text-align: center;
+}
+
+/* сброс маркированых точек в списках */
+.benefits__list, .nav-contacts, .nav__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__link {
+  text-decoration: none;
 }
 
 .container {
@@ -137,7 +137,7 @@ img {
   color: #2196F3;
 }
 
-.nav__menu {
+.nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

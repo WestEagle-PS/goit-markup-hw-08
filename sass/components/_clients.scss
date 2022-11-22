@@ -4,11 +4,13 @@
   |====================================
 */
 .clients__list {
+    @extend %list;
     display: flex;
     gap: 30px;
 }
 
 .clients__item {
+@extend %item;
     display: flex;
     width: 170px;
     height: 92px;
@@ -28,6 +30,7 @@
 }
 
 .clients__link {
+    @extend %link;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -23,13 +23,16 @@
     padding-top: 24px;
     padding-bottom: 25px;
     margin-right: 93px;
+    text-decoration: none;
 }
 
 .logo--light {
+    @extend %link;
     color: #2196F3;
 }
 
-.nav__menu {
+.nav__list {
+    @extend %list; 
     display: flex;
     margin-right: 310px;
 }
@@ -45,6 +48,7 @@
     margin-left: 50px;
 } */
 .nav__link {
+    @extend %link;
     position: relative;
     display: flex;
     gap: 10px;
@@ -90,6 +94,7 @@
 }
 
 .nav-contacts {
+    @extend %list;
     display: flex;
     gap: 30px;
     margin-left: 0;
@@ -104,6 +109,7 @@
 }
 
 .nav-contacts__link {
+    @extend %link;
     display: flex;
     gap: 10px;
     font-weight: 500;
