@@ -111,8 +111,6 @@ img {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  outline: 2px solid red;
-  outline-offset: -2px;
 }
 @media screen and (min-width: 480px) {
   .container {
@@ -810,6 +808,7 @@ img {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover, .button:focus {
+  border: 0;
   background-color: #2196f3;
   color: var(--main-white-clr);
   border-color: #2196f3;
@@ -819,9 +818,14 @@ img {
 }
 
 /* создаем сетку из 9 элементов */
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .flex-container {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
     margin-top: 40px;
   }
 }
@@ -842,16 +846,26 @@ calc((100% - кол-во маржинов в строке * значение м�
   .flex-element {
     display: block;
     width: 450px;
+    text-align: left;
+    border-top: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .flex-element {
+    width: calc((100% - 30px) / 2);
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+  .flex-element:nth-child(2n) {
+    margin-right: 0;
+  }
+  .flex-element:nth-child(9) {
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1200px) {
   .flex-element {
     width: calc((100% - 60px) / 3);
-    text-align: left;
-    margin-right: 30px;
-    margin-bottom: 30px;
-    /* border: 1px solid #EEEEEE; */
-    border-top: 0;
     /* мы не можем применить justify-content: space-between, так как если в сетке будет к примеру 5 єлементов, то один ряд будет с дыркой */
     /* для каждого 3 элемента в сетке убираем правый маржин */
     /* убираем нижний маржин у последних 3х элементов сетки */
@@ -904,6 +918,36 @@ calc((100% - кол-во маржинов в строке * значение м�
   border-top: 0;
 }
 
+/* добавляем выпадающее меню overlay для карточек */
+@media screen and (min-width: 480px) {
+  .overlay-box {
+    width: 450px;
+    height: 294px;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+@media screen and (min-width: 768px) {
+  .overlay-box {
+    width: 354px;
+    height: 294px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .overlay-box {
+    width: 370px;
+    height: 294px;
+  }
+}
+
 .overlay {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -934,35 +978,22 @@ calc((100% - кол-во маржинов в строке * значение м�
           transform: translateY(0);
 }
 
-/* добавляем выпадающее меню overlay для карточек */
-@media screen and (min-width: 480px) {
-  .overlay-box {
-    width: 100%;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .overlay-box {
-    width: 370px;
-    height: 294px;
-    position: relative;
-    overflow: hidden;
-    -webkit-transition-property: -webkit-transform;
-    transition-property: -webkit-transform;
-    transition-property: transform;
-    transition-property: transform, -webkit-transform;
-    -webkit-transition-duration: 250ms;
-            transition-duration: 250ms;
-    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-}
-
 .overlay-text {
   font-size: 18px;
   line-height: 1.5555555556;
   letter-spacing: 0.03em;
   color: var(--main-white-clr);
-  padding: 63px 24px;
+  padding: 77px 24px;
+}
+@media screen and (min-width: 768px) {
+  .overlay-text {
+    padding: 49px 24px 77px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .overlay-text {
+    padding: 63px 24px;
+  }
 }
 
 .footer {
