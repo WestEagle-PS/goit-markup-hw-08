@@ -17,12 +17,27 @@
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
-  font-size: 26px;
-  line-height: calc(31 / 26);
   letter-spacing: 0.03em;
-  padding-top: 24px;
-  padding-bottom: 25px;
-  margin-right: 93px;
+  font-size: 24px;
+  line-height: calc(28 / 24);
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-right: 87px;
+
+  // tablet
+  @media screen and (min-width: 768px) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
+  // desktop
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: calc(31 / 26);
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 92px;
+  }
 }
 
 .logo--light {
@@ -39,15 +54,23 @@
 }
 
 .nav__menu {
-  display: flex;
-  margin-right: 310px;
+  // tablet
+  @media screen and (min-width: 768px) {
+    display: flex;
+    gap: 50px;
+  }
+
+  // desktop
+  @media screen and (min-width: 1200px) {
+    margin-right: auto;
+  }
 }
 
 /* работаем с nav menu, убираем маржен крайнему элементу, есть несколько вариантов: */
 /* вариант 1, все li кроме последнего*/
-.nav__item:not(:last-child) {
-  margin-right: 50px;
-}
+// .nav__item:not(:last-child) {
+//   margin-right: 50px;
+// }
 
 /* вариант 2 (old school): через + (соседство элементов) */
 /* .nav-menu .item+.item {
@@ -101,20 +124,40 @@
 .nav-contacts {
   display: none;
 
+  // tablet
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    padding-top: 21px;
+    padding-bottom: 21px;
+    margin-left: auto;
+    gap: 10px;
+  }
+
   // desktop
   @media screen and (min-width: 1200px) {
-    display: flex;
+    flex-direction: row;
     gap: 30px;
     margin-left: 0;
     align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 
 .nav-contacts__item {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  // tablet
+  @media screen and (min-width: 768px) and (max-width: 1199) {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  // desktop
+  @media screen and (min-width: 1200px) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 .nav-contacts__link {

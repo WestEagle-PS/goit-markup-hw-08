@@ -153,12 +153,27 @@ img {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.1923076923;
   letter-spacing: 0.03em;
-  padding-top: 24px;
-  padding-bottom: 25px;
-  margin-right: 93px;
+  font-size: 24px;
+  line-height: 1.1666666667;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-right: 87px;
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.1923076923;
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 92px;
+  }
 }
 
 .logo--light {
@@ -174,19 +189,22 @@ img {
   }
 }
 
-.nav__menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-right: 310px;
+@media screen and (min-width: 768px) {
+  .nav__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 50px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nav__menu {
+    margin-right: auto;
+  }
 }
 
 /* работаем с nav menu, убираем маржен крайнему элементу, есть несколько вариантов: */
 /* вариант 1, все li кроме последнего*/
-.nav__item:not(:last-child) {
-  margin-right: 50px;
-}
-
 /* вариант 2 (old school): через + (соседство элементов) */
 /* .nav-menu .item+.item {
     margin-left: 50px;
@@ -237,24 +255,47 @@ img {
 .nav-contacts {
   display: none;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .nav-contacts {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 21px;
+    padding-bottom: 21px;
+    margin-left: auto;
+    gap: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nav-contacts {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     gap: 30px;
     margin-left: 0;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 
-.nav-contacts__item {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 32px;
-  padding-bottom: 32px;
+@media screen and (min-width: 768px) and (max-width: 1199) {
+  .nav-contacts__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nav-contacts__item {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 .nav-contacts__link {
@@ -348,7 +389,7 @@ img {
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero__image {
-    background-image: url("/images/main/overlay_deskt@2x.png"), url("images/main/hero_desk@2x.jpg");
+    background-image: url("/images/main/overlay_deskt@2x.png"), url("/images/main/hero_desk@2x.jpg");
   }
 }
 
@@ -1188,21 +1229,27 @@ calc((100% - кол-во маржинов в строке * значение м�
   pointer-events: none;
 }
 
-.modal {
-  /* позицуионируем модальное окно по центру */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
-  /* ---------------------------------------------------- */
-  width: 528px;
-  min-height: 581px;
-  background-color: var(--main-white-clr);
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  padding: 40px;
+@media screen and (min-width: 480px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+    width: 450px;
+    min-height: 609px;
+    background-color: var(--main-white-clr);
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    min-height: 581px;
+  }
 }
 
 .modal-btn {
@@ -1223,9 +1270,9 @@ calc((100% - кол-во маржинов в строке * значение м�
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  margin: 7px 8px 0 0;
+  margin: 8px 8px 0 0;
   padding: 0;
   cursor: pointer;
 }
@@ -1240,7 +1287,7 @@ calc((100% - кол-во маржинов в строке * значение м�
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-btn-icon:hover, .modal-btn-icon:focus {
-  fill: #2196F3;
+  fill: #2196f3;
 }
 
 .modal-title {
@@ -1250,6 +1297,11 @@ calc((100% - кол-во маржинов в строке * значение м�
   line-height: 1.15;
   margin-bottom: 12px;
   color: var(--main-dark-clr);
+}
+@media screen and (min-width: 1200px) {
+  .modal-title {
+    line-height: 1.5;
+  }
 }
 
 .modal-form-label {
@@ -1266,7 +1318,7 @@ calc((100% - кол-во маржинов в строке * значение м�
 }
 
 .modal-form-field {
-  width: 448px;
+  width: 370px;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -1282,12 +1334,18 @@ calc((100% - кол-во маржинов в строке * значение м�
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form-field:hover, .modal-form-field:focus {
-  border: 1px solid #2196F3;
+  border: 1px solid #2196f3;
+}
+@media screen and (min-width: 1200px) {
+  .modal-form-field {
+    width: 448px;
+    height: 40px;
+  }
 }
 
 .modal-form-field:hover + .modal-form-icon,
 .modal-form-field:focus + .modal-form-icon {
-  fill: #2196F3;
+  fill: #2196f3;
 }
 
 .modal-form-icon {
@@ -1333,7 +1391,7 @@ calc((100% - кол-во маржинов в строке * значение м�
   border-radius: 2px;
 }
 .modal-form-checkbox:checked {
-  background-color: #2196F3;
+  background-color: #2196f3;
   background-image: url(../images/icons/modal-chek.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -1341,17 +1399,23 @@ calc((100% - кол-во маржинов в строке * значение м�
 }
 
 .modal-form-agreement-text {
-  font-size: 14px;
-  line-height: 1.7142857143;
+  font-size: 12px;
+  line-height: 1.1666666667;
   letter-spacing: 0.03em;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
+@media screen and (min-width: 1200px) {
+  .modal-form-agreement-text {
+    font-size: 14px;
+    line-height: 1.7142857143;
+  }
+}
 
 .modal-form-link {
-  color: #2196F3;
+  color: #2196f3;
 }
 
 .modal-form-text {
@@ -1398,10 +1462,10 @@ calc((100% - кол-во маржинов в строке * значение м�
   color: rgba(117, 117, 117, 0.5);
 }
 .modal-form-text:hover, .modal-form-text:focus {
-  border: 1px solid #2196F3;
+  border: 1px solid #2196f3;
 }
 .modal-form-text:focus-visible {
-  border: 1px solid #2196F3;
+  border: 1px solid #2196f3;
   outline: 0;
 }
 
@@ -1418,7 +1482,7 @@ textarea {
   color: var(--main-white-clr);
   margin-bottom: 40px;
   cursor: pointer;
-  background-color: #2196F3;
+  background-color: #2196f3;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -1433,7 +1497,7 @@ textarea {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-formhover {
-  background-color: #188CE8;
+  background-color: #188ce8;
 }
 
 .icon-item .button {
