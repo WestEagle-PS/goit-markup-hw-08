@@ -30,10 +30,10 @@
       <nav class="nav">
         <ul class="nav__menu list">
           <li class="nav__item">
-            <a class="nav__link link" href="./index.html">Студія</a>
+            <a class="nav__link link " href="./index.html">Студія</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link link nav__link--current" href="./portfolio.html">Портфоліо</a>
+            <a class="nav__link nav__link--current link" href="./portfolio.html">Портфоліо</a>
           </li>
           <li class="nav__item">
             <a class="nav__link link" href="/">Контакти</a>
@@ -55,6 +55,11 @@
             </svg> +38 096 111 11 11</a>
         </li>
       </ul>
+      <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="menu-toggle__icon" width="24" height="24">
+          <use href="./images/icons-sprite.svg#burger-menu"></use>
+        </svg>
+      </button>
     </div>
   </header>
 
@@ -66,7 +71,7 @@
         <h1 class="visually-hidden">наше портфоліо</h1>
 
         <!-- кнопки-фильтры -->
-        <ul class="list filters-list">
+        <ul class="filters-list list">
           <li class="filter-item"><button class="button filter-button" type="button">Усі</button></li>
           <li class="filter-item"><button class="button filter-button" type="button">Веб-сайти</button></li>
           <li class="filter-item"><button class="button filter-button" type="button">Додатки</button></li>
@@ -78,7 +83,21 @@
         <ul class="list flex-container">
           <li class="flex-element">
             <a href="" class="card">
-              <div class="overlay-box"><img src="./images/portfolio/tehno.jpg" alt="Технокряк" width="370" />
+              <div class="overlay-box">
+                <picture>
+                  <source media="(min-width: 1200px)"
+                    srcset="./images/portfolio/img-1_desk@1x.jpg 1x, ./images/portfolio/img-1_desk@2x.jpg 2x" />
+
+                  <!-- tablet screen -->
+                  <source media="(min-width: 768px)"
+                    srcset="./images/portfolio/img-1_tab@1x.jpg 1x, ./images/portfolio/img-1_tab@2x.jpg 2x" />
+
+                  <!-- mobile screen -->
+                  <source media="(min-width: 480px)"
+                    srcset="./images/portfolio/img-1_mob@1x.jpg 1x, ./images/portfolio/img-1_mob@2x.jpg 2x" />
+                  <img src="./images/portfolio/img-1_desk@1x.jpg" alt="Технокряк" width="450" height="294"
+                    loading="lazy" />
+                </picture>
                 <div class="overlay">
                   <p class="overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все
@@ -98,8 +117,21 @@
 
           <li class="flex-element">
             <a href="" class="card">
-              <div class="overlay-box"><img src="./images/portfolio/poster.jpg" alt="Постер New Orlean vs Golden Star"
-                  width="370" />
+              <div class="overlay-box">
+                <picture>
+                  <source media="(min-width: 1200px)"
+                    srcset="./images/portfolio/img-2_desk@1x.jpg 1x, ./images/portfolio/img-2_desk@2x.jpg 2x" />
+
+                  <!-- tablet screen -->
+                  <source media="(min-width: 768px)"
+                    srcset="./images/portfolio/img-2_tab@1x.jpg 1x, ./images/portfolio/img-2_tab@2x.jpg 2x" />
+
+                  <!-- mobile screen -->
+                  <source media="(min-width: 480px)"
+                    srcset="./images/portfolio/img-2_mob@1x.jpg 1x, ./images/portfolio/img-2_mob@2x.jpg 2x" />
+                  <img src="./images/portfolio/img-2_desk@1x.jpg" alt="New Orlean" width="450" height="294"
+                    loading="lazy" />
+                </picture>
                 <div class="overlay">
                   <p class="overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все
@@ -333,6 +365,60 @@
     </div>
   </footer>
 
+  <!-- модальное окно в mobile menu (размещаем после футера) -->
+  <div class="menu-container js-menu-container" id="mobile-menu">
+    <button class="menu-toggle js-close-menu">
+      <svg class="menu-toggle__icon" width="24" height="24">
+        <use href="./images/icons-sprite.svg#close-button"></use>
+      </svg>
+    </button>
+
+    <ul class="mobile-menu list">
+      <li class="mobile-menu-item">
+        <a class="mobile-menu-link" href="./index.html" class="link">Студія</a>
+      </li>
+      <li class="mobile-menu-item">
+        <a class="mobile-menu-link current" href="./portfolio.html" class="link">Портфоліо</a>
+      </li>
+      <li class="mobile-menu-item">
+        <a class="mobile-menu-link" href="" class="link">Контакти</a>
+      </li>
+    </ul>
+
+    <ul class="mobile-contacts list">
+      <li class="mobile-contacts-item">
+        <a class="mobile-contacts-link link accent" href="tel:+380961111111">+38 096 111 11 11</a>
+      </li>
+      <li class="mobile-contacts-item">
+        <a class="mobile-contacts-link link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+      </li>
+    </ul>
+
+    <ul class="mobile-socials list">
+      <li class="mobile-socials-item item">
+        <a class="mobile-socials-link link" target="_blank" rel="noreferrer noopenner" aria-label="Instagram"
+          href="https://www.instagram.com/">Instagram</a>
+      </li>
+      <li class="mobile-socials-item item">
+        <a class="mobile-socials-link link" target="_blank" rel="noreferrer noopenner" aria-label="Twitter"
+          href="https://twitter.com">Twitter</a>
+      </li>
+      <li class="mobile-socials-item item">
+        <a class="mobile-socials-link link" target="_blank" rel="noreferrer noopenner" aria-label="Facebook"
+          href="https://uk-ua.facebook.com/">Facebook</a>
+      </li>
+      <li class=" mobile-socials-item item">
+        <a class="mobile-socials-link link" target="_blank" rel="noreferrer noopenner" aria-label="Linkedin"
+          href="https://www.linkedin.com/feed/">LinkedIn</a>
+      </li>
+    </ul>
+
+  </div>
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"></script>
+  <script src="/js/mobile-menu.js"></script>
 </body>
 
 </html>
