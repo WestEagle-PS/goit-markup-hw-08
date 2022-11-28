@@ -651,7 +651,7 @@ img {
   fill: currentColor;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 320px) {
   .clients__list {
     width: 100%;
     display: -webkit-box;
@@ -671,7 +671,7 @@ img {
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 320px) {
   .clients__item {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -971,7 +971,7 @@ calc((100% - кол-во маржинов в строке * значение м�
   padding-bottom: 60px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 320px) {
   .footer__container {
     text-align: center;
   }
@@ -1002,7 +1002,7 @@ calc((100% - кол-во маржинов в строке * значение м�
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 320px) {
   .footer__logo {
     font-family: "Raleway";
     font-style: normal;
