@@ -1,21 +1,12 @@
 .hero {
-  // mobile
-  @media screen and (min-width: 480px) {
-    width: 480px;
-  }
-
-  // tablet
-  @media screen and (min-width: 768px) {
-    width: 768px;
-  }
-
   // desktop
   @media screen and (min-width: 1200px) {
-    width: 1200px;
     background-color: #2f303a;
     text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
