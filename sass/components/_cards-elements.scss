@@ -29,7 +29,7 @@ calc((100% - кол-во маржинов в строке * значение м�
   }
 
   // tablet
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     width: calc((100% - 1 * 30px) / 2);
     margin-right: 30px;
     margin-bottom: 30px;
